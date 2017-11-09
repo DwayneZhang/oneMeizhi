@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <com.example.dwayne.onemeizhi.widget.MultiSwipeRefreshLayout
+        android:id="@+id/swip_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecylerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="2.5dp"
+            android:paddingRight="2.5dp"/>
+
+    </com.example.dwayne.onemeizhi.widget.MultiSwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
+        android:clickable="true"
+        android:elevation="4dp"
+        app:elevation="4dp"
+        app:layout_anchor="@id/swip_refresh_layout"
+        app:borderWidth="0dp"
+        app:layout_anchorGravity="right|bottom"
+        app:layout_behavior="@string/app_name"
+        android:src="@mipmap/ic_launcher"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
